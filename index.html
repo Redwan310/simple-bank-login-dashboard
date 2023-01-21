@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+    content="wclassth=device-wclassth, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Jillur Bank</title>
+</head>
+<body>
+   <div id="loginarea">
+        <h2>Welcome to Jillur Bank </h2>
+        <div id="login-item">
+            <h3 class="login-name">Login to jillur Bank</h3>
+            <form action="">
+                <input class="login-input" type="text" id="" placeholder="User Name"  required>
+                <input class="login-input" type="password" id="" placeholder="Your Password"  required>
+                <input type="submit" id="login" value="login">
+            </form>
+        </div>
+   </div>
+
+   <div id="depositarea">
+        <h2>Dashboard to Jillur Bank</h2>
+        <div class="row1">
+            <div style="background-color: rgb(104, 5, 5);" class="col-4">
+                <h3 style="margin-bottom: 5px;">Deposit</h3>
+                <h4 class="dolar">$<span id="currentDeposit">00</span></h4>
+            </div>
+            <div style="background-color: rgb(131, 5, 120);" class="col-4">
+                <h3 style="margin-bottom: 5px;">Withdraw</h3>
+                <h4 class="dolar">$<span id="currentwithdraw">00</span></h4>
+            </div>
+            <div style="background-color: rgb(40, 5, 105);" class="col-4">
+                <h3 style="margin-bottom: 5px;">Balance</h3>
+                <h4 class="dolar">$<span id="currentBalance">1000</span></h4>
+            </div>
+    </div>
+    <div class="row2">
+            <div class="col-6">
+                <h3 class="d-w" style="color: rgb(255, 0, 0); ">Deposit</h3>
+                <input type="text" class="input" id="depositAmount" placeholder="$ Amount You Want to Deposit"><br>
+                <button id="depositBtn" class="enter">Deposit</button>
+            </div>
+            <div class="col-6">
+                <h3 class="d-w" style="color: rgb(255, 0, 179);">Withdraw</h3>
+                <input class="input" type="text" name="" id="withdrawAmount" placeholder="$ Amount You Want to Withdraw"><br>
+                <button id="withdrawBtn" class="enter">Withdraw</button>
+            </div>
+        </div>
+   </div>
+
+   <script>
+    //login button event handler
+var login = document.getElementById('login');
+login.addEventListener('click', function(){
+    var loginitem = document.getElementById('loginarea');
+        loginitem.style.display = "none";
+    var deposititem = document.getElementById('depositarea');
+        deposititem.style.display = "block";
+})
+
+//deposit button event hendler
+var depositBtn = document.getElementById('depositBtn');
+depositBtn.addEventListener('click', function(){
+    var depositNumber = inputNumber('depositAmount')
+    updateSpan("currentDeposit", depositNumber);
+    updateSpan("currentBalance", depositNumber);
+    document.getElementById("depositAmount").value = "";
+});
+
+//withdraw button event hendler
+var withdrawBtn = document.getElementById('withdrawBtn');
+withdrawBtn.addEventListener('click', function(){
+    var withdrawNumber = inputNumber('withdrawAmount')
+    updateSpan("currentwithdraw", withdrawNumber);
+    updateSpan("currentBalance", -1 * withdrawNumber);
+    document.getElementById("withdrawAmount").value = "";
+});
+
+// inputNumber and updatespan function
+function inputNumber(id){
+    var amount = document.getElementById(id).value;
+    var amountNumber = parseFloat(amount);
+    return amountNumber;
+}
+function updateSpan(id, addedNumber){
+    var current = document.getElementById(id).innerText;
+    var currentNumber = parseFloat(current);
+    var total = addedNumber + currentNumber;
+    document.getElementById(id).innerText = total;   
+}
+   </script>
+</body>
+</html>

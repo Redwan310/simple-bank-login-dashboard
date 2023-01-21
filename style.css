@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+#loginarea{
+    text-align: left;
+    width: 600px;
+}
+#loginarea h2{
+    text-align: center;
+    }
+#login-item{
+    background-color: rgba(151, 0, 118, 0.856);
+    padding: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: 20px;
+    height: 280px;
+}
+.login-input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+#login-item #login{
+    border: 2px solid rgb(235, 235, 229);
+    background-color: rgb(19, 7, 92);
+    padding: 10px 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+input::placeholder{
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+/*-----------------*/
+#depositarea{
+    display: none;
+}
+#depositarea h2{
+    text-align: center;
+    margin-bottom: 65px;
+}
+.row1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.row1 .col-4{
+    background-color: rgb(133, 133, 133);
+    padding: 10px 36px;
+    margin: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 24px;
+    color: rgb(238, 241, 241);
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.row2 .col-6{
+    background-color: rgba(29, 248, 0, 0.295);
+    padding: 10px 30px;
+    margin: 10px;
+    width: 50%;
+    height: 200px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 24px;
+    color: rgb(238, 241, 241);
+}
+.input{
+    margin-top: 20px;
+}
+.col-6 input{
+    width: 100%;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.col-6 input::placeholder{
+    font-size: 12px;
+}
+.enter{
+    background-image: linear-gradient(to right, rgb(214, 69, 69), rgb(46, 107, 46));
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.dolar{
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+}
+
+/* responsive design */
+@media only screen and (max-width:600px){
+/*-----------------*/
+#loginarea{
+    width: 500px;
+    padding: 20px;
+}
+#login-item{
+    background-color: rgba(17, 207, 255, 0.89);
+    height: 200px;
+    padding: 10px 10px;
+}
+.login-input{
+    border: 2px dotted rgb(0, 0, 0);
+    outline: none;
+    background-color: rgba(124, 121, 121, 0);
+    color: rgb(0, 0, 0);
+    padding: 8px;
+}
+#login-item #login{
+    border: none;
+    padding: 8px 20px;
+    margin-top: 15px;
+}
+input::placeholder{
+    font-size: 14px;
+}
+.login-name{
+    margin-bottom: 10px; 
+    color: rgb(0, 0, 0);
+}
+/*-----------------*/
+      #depositarea h2{
+        margin-bottom: 20px;
+    }
+    .row1{
+        flex-direction: column;
+    }
+    .row1 .col-4{
+        width: 120px;
+        font-size: 14px;
+        text-align: center;
+        border: 1px dotted white;
+        padding: 5px 10px;
+    }
+    .row2{
+        justify-content: center;
+    }
+    .row2 .col-6{
+        background-color: rgba(61, 11, 11, 0.603);
+        padding: 5px 10px;
+        border: 1px dotted white;
+        width: 40%;
+        height: 130px;
+    }
+    .input{
+        margin-top: 5px;
+    }
+    .col-6 input{
+        width: 100%;
+        font-size: 16px;
+        padding: 5px;
+    }
+    .col-6 input::placeholder{
+        font-size: 8px;
+    }
+    .enter{
+        padding: 5px 10px;
+        font-size: 10px;
+        margin: 15px 55px;
+        background-image: none;
+        background-color: rgb(141, 0, 0);
+        color: white;
+        
+    }
+    .dolar{
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        padding: 3px;
+    }
+    .d-w{
+        font-size: 18px; 
+        margin-bottom: 10px; 
+        text-align: center;
+    }
+}
